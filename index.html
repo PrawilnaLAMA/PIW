@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Książex</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <selection class="navbar"> 
+        <img class="nav-logo" src="images/logo.png"/>
+        <div class="nav-links">
+            <div class="link-borrow">POŻYCZ</div>
+            <div class="link-lend">WYSTAW</div>
+        </div>
+        <div class="nav-account">
+            <div class="account-login">ZALOGUJ</div>
+            <div class="account-register">ZAREJESTRUJ</div>
+        </div>
+    </selection>
+
+    <selection class="content">
+        <selection class="filters">
+
+            <h1 class="filters-title">FILTRY</h1>
+
+            <div class="filter-cost">
+                <div class="cost-label">cena</div>
+                <div class="cost-inputs">
+                    <input type="number" class="cost-input" placeholder="od" min="0">
+                    <input type="number" class="cost-input" placeholder="do" min="0">
+                </div>
+            </div>
+            <div class="filter-cover">
+                <div class="cover-type">okładka</div>
+                <input @onclick="() => _userDto.AccountType = AccountType.User"
+                        type="radio" id="soft-cover" name="toggle" class="toggle-input">
+                <label for="soft-cover" class="choice-button">Miękka</label>
+
+                <input @onclick="() => _userDto.AccountType = AccountType.Tutor"
+                        type="radio" id="hard-cover" name="toggle" class="toggle-input">
+                <label for="hard-cover" class="choice-button">Twarda</label>
+            </div>
+            <div class="filter-pages">
+                <div class="pages-label">ilość stron</div>
+                <div class="pages-inputs">
+                    <input type="number" class="cost-input" placeholder="od" min="0">
+                    <input type="number" class="cost-input" placeholder="do" min="0">
+                </div>
+            </div>
+            <div class="filter-author">
+                <input type="search" id="author-search" class="filter-search" placeholder="autor" />
+            </div>
+            <div class="filter-description">
+                <input type="search" id="subject-search" class="main-search" placeholder="słowo w opisie" />
+            </div>
+        </selection>
+        <selection class="books">
+            <div class="book-search">
+                <div class="cont-title">WYSZUKAJ KSIĄŻKI, KTÓRE CIĘ INTERESUJĄ</div>
+                <input type="search" class="cont-search-input" placeholder="Wpisz tytuł książki" />    
+            </div>
+            <div class="book-announcements">
+                <div class="book-announcement">
+                    <div class="announcement-user">
+                        <img src="images/user-img.png" class="announcement-user-img"/>
+                        <h3 class="announcement-user-name"> Jan Kowalski</h3>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-info">
+                            <h1 class="announcement-title">Wiedźmak</h1>
+                            <h2 class="announcement-description">Super książka o wiedźmach i macDonald's</h2>
+                        </div>
+                        <div class="announcement-content-down">
+                            <div class="announcement-content-down-info">
+                                <div class="announcement-book-cover">
+                                    <div class="announcement-book-cover-schem">Okładka: </div>
+                                    <div class="announcement-book-cover-var">Miękka</div>
+                                </div>
+                                <div class="announcement-book-author">
+                                    <div class="announcement-book-author-schem">Autor: </div>
+                                    <div class="announcement-book-author-var">Szopen</div>
+                                </div>
+                                <div class="announcement-book-numpage">
+                                    <div class="announcement-book-numpage-schem">Ilość stron: </div>
+                                    <div class="announcement-book-numpage-var">347</div>
+                                </div>
+                            </div>  
+                            <div class="announcement-prize">
+                                <span class="announcement-prize-number">20</span>
+                                <span class="announcement-prize-currency">zł</span>
+                            </div>  
+                            <button class="announcement-button">Dodaj do koszyka</button>
+                        </div>
+                        
+                    </div>
+                    <div class="announcement-book-img-container">
+                        <img src="images/book-img.png" class="announcement-book-img"/>
+                    </div>
+                </div>
+            </div>
+        </selection>    
+    </selection>
+    
+    <selection class="footer">
+        <img src="images/facebook.png" class="footer-facebook"/>
+        <img src="images/instagram.png" class="footer-instagram"/>
+        <img src="images/x.png" class="footer-x"/>
+    </selection>
+    
+</body>
+</html>
