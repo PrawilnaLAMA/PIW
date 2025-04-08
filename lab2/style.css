@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #add4ff;
+    color: #007bff;
+}
+
+.delete-button {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #cb0000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #cb0000;
+    color: white;
+}
+
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-span {
+    flex-grow: 1; /* Pozwala dacie zająć przestrzeń między tekstem a przyciskiem */
+    text-align: center; /* Wyśrodkowanie tekstu daty */
+    font-size: 0.9em;
+    color: gray;
+}
+
+/* Wykluczenie przycisku "X" z przekreślenia */
+.completed .delete-button {
+    text-decoration: none; /* Wyłączenie przekreślenia */
+    color: #cb0000; /* Zachowanie koloru przycisku */
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed span:first-child {
+    text-decoration: line-through;
+    color: rgb(255, 0, 0);
+}
