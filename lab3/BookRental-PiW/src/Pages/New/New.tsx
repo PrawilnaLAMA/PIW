@@ -1,20 +1,14 @@
-import React from "react";
+// import React from "react";
 import "./New.css";
 import AddBook from "../../components/AddBook/AddBook";
+import { User } from "firebase/auth";
 
 interface NewProps {
-  onAddBook: (book: {
-    title: string;
-    author: string;
-    pages: number;
-    cover: "Miękka" | "Twarda";
-    price: number;
-    description: string;
-  }) => void;
+  user: User | null; // Dodano właściwość user
 }
 
-function New({ onAddBook }: NewProps) {
-  return <AddBook onAddBook={onAddBook} />;
+function New({ user }: NewProps) {
+  return <AddBook user={user} />; // Przekazanie user do AddBook
 }
 
 export default New;

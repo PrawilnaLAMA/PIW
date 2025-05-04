@@ -2,8 +2,9 @@ import React from 'react';
 import './Book.css';
 import BookAnnouncement from './BookAnnouncement';
 import { Link } from 'react-router-dom';
+
 interface Book {
-  id: number;
+  id: string; // Zmieniono na string, aby pasowało do reszty projektu
   title: string;
   author: string;
   pages: number;
@@ -28,7 +29,9 @@ const Book: React.FC<BookProps> = ({ books }) => {
           cover={book.cover}
           price={book.price}
           description={book.description}
-          onDelete={() => {}}
+          onDelete={() => {
+            console.log(`Usunięto książkę: ${book.title}`);
+          }}
         />
       ))}
       {/* Dodanie przycisku na dole */}

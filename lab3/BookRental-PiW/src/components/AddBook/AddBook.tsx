@@ -1,23 +1,18 @@
 import React, { useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../utils/firebaseConfig";
 import "./AddBook.css";
 
 interface AddBookProps {
-  onAddBook: (book: {
-    title: string;
-    author: string;
-    pages: number;
-    cover: "Miękka" | "Twarda";
-    price: number;
-    description: string;
-  }) => void;
+  user: any;
 }
 
-function AddBook({ onAddBook }: AddBookProps) {
+function AddBook({ user }: AddBookProps) {
   const [formData, setFormData] = useState({
     title: "",
     author: "",
     pages: 0,
-    cover: "Miękka" as "Miękka" | "Twarda", // Ustawienie typu zgodnego z "Miękka" | "Twarda"
+    cover: "Miękka" as "Miękka" | "Twarda",
     price: 0,
     description: "",
   });
@@ -30,14 +25,18 @@ function AddBook({ onAddBook }: AddBookProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onAddBook(formData); // Przekazanie danych do funkcji onAddBook
+    if (!user) return alert("Musisz być zalogowany, aby dodać książkę.");
+    await addDoc(collection(db, "books"), {
+      ...formData,
+      ownerId: user.uid,
+    });
     setFormData({
       title: "",
       author: "",
       pages: 0,
-      cover: "Miękka", // Resetowanie do domyślnej wartości
+      cover: "Miękka",
       price: 0,
       description: "",
     });
