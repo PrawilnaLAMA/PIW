@@ -1,0 +1,15 @@
+.filters {
+    position: relative;
+    width: 35%; /* Szerokość komponentu Filters */
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #eacf95;
+    padding-top: 5%;
+}
+
+.filter-description {
+    text-align: center;
+}

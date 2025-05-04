@@ -1,0 +1,33 @@
+
+.main-navbar {
+    width: 100vw;
+    height: clamp(3rem, 10vh, 5rem);
+    background-color: #c5a67a;
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+}
+
+.nav-links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.nav-account {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.nav-logo {
+    height: 100%;
+    width: auto;
+}

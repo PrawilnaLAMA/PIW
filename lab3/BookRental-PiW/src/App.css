@@ -1,0 +1,23 @@
+/* reset */
+h1 {
+    margin: 0
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dcceaf;
+}
+
+.content {
+    position: relative;
+    top: clamp(1.5rem, 7vh, 4rem);;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4e2c7;
+}
+
+.footer-facebook {
+    width: auto;
+    height: 50%;
+}
+
+.footer-instagram {
+    width: auto;
+    height: 50%;
+}
+
+.footer-x {
+    width: auto;
+    height: 50%;
+}
